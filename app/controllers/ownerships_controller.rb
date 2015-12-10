@@ -4,6 +4,7 @@ class OwnershipsController < ApplicationController
   def create
     if params[:asin]
       @item = Item.find_or_initialize_by(asin: params[:asin])
+      @user.want(@item)
     else
       @item = Item.find(params[:item_id])
     end
