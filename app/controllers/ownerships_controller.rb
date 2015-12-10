@@ -26,6 +26,10 @@ class OwnershipsController < ApplicationController
       @item.raw_info        = amazon_item.get_hash
       @item.save!
     end
+    
+    if prams[:type] == "Want"
+      @item.want(item)
+    end
 
     # TODO ユーザにwant or haveを設定する
     # params[:type]の値ににHaveボタンが押された時には「Have」,
