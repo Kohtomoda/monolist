@@ -48,7 +48,7 @@ class OwnershipsController < ApplicationController
     if params[:type] == "Want"
       current_user.unwant(@item)
     elsif params[:type] == "Have"
-      current_user.unwant(@item)
+      current_user.unhave(@item)
     end
 
     # TODO 紐付けの解除。 

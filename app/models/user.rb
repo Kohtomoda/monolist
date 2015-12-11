@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
   end
 
   def unwant(item)
-    wants.find_by(item_id: item.id)
+    wants.find_by(item_id: item.id).destroy
   end
 
   def want?(item)
