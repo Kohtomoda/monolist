@@ -8,11 +8,13 @@
           
           <div class="img-wrap">
 
+
             <% if item.get('LargeImage').present? %>
-            <img src="<%= item.get('LargeImage/URL') %>" />
+            <img src="<%= item.get('LargeImage/URL') %>" alt=“<%= item.get(‘ItemAttributes/Title’) %>” />
             <% elsif %>
             <%= image_tag("no-image.png" , alt: item.get('ItemAttributes/Title')) %>
             <% end %>
+
 
           </div>
         </div>
