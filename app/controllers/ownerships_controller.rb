@@ -57,3 +57,4 @@ class OwnershipsController < ApplicationController
 
   end
 end
+
